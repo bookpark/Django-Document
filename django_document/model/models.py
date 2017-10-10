@@ -16,8 +16,15 @@ class Fruit(models.Model):
 
 
 class Manufacturer(models.Model):
-    name = models.CharField('자동차 제조사', max_length=50)
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 
 class Car(models.Model):
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50, blank=True)
+
+    def __str__(self):
+        return self.name
