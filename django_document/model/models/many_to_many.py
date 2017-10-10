@@ -7,8 +7,15 @@ __all__ = (
 
 
 class Topping(models.Model):
-    pass
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
 
 
 class Pizza(models.Model):
     toppings = models.ManyToManyField(Topping)
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
