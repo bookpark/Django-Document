@@ -1,5 +1,11 @@
 from django.db import models
 
+__all__ = (
+    'Car',
+    'Manufacturer',
+    'User',
+)
+
 
 # 만약 아직 정의되지 않은 ForeignKey를 정의하고 싶다면 참조하는 클래스를 문자열로 넣어준다 (문자열이기 때문에 rename 시킬 때는 같이 바뀌지 않는다
 class Car(models.Model):
