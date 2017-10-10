@@ -1,3 +1,3 @@
-from .simple import *
+from .basic import *
 from .self import *
-from .symmetrical_false import *
+from .symmetrical import *
