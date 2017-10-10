@@ -1,17 +1,12 @@
 from django.contrib import admin
 
 from .models import (
-    Manufacturer,
-    Car,
-    User,
+    Manufacturer, Car, User,
     Person,
     Fruit,
-)
-from .models.many_to_many import (
-    Topping,
-    Pizza,
-    FacebookUser,
-    InstagramUser,
+    Topping, Pizza,
+    FacebookUser, InstagramUser,
+    Idol, Group, Membership,
 )
 
 admin.site.register(Person)
@@ -23,3 +18,6 @@ admin.site.register(Topping)
 admin.site.register(Pizza)
 admin.site.register(FacebookUser)
 admin.site.register(InstagramUser)
+admin.site.register(Idol)
+admin.site.register(Group)
+admin.site.register(Membership)
