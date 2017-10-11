@@ -6,6 +6,7 @@ from .models import (
     Supplier, Champion)
 
 
+# Admin 페이지 커스터마이징
 class ChampionAdmin(admin.ModelAdmin):
     list_display = ('name', 'champion_type', 'rank')
     list_editable = ('rank',)
