@@ -32,3 +32,8 @@ class User(models.Model):
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        if self.spouse and self.spouse.pk == self.pk:
+            self.spouse = None
+        super(User, self).save(*args, **kwargs)
