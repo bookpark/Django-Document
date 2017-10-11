@@ -24,7 +24,7 @@ class Manufacturer(models.Model):
         return self.name
 
 
-# 동등한 유저일 때 관계를 가지는 경우
+# 동등한 유저일 때 관계를 가지는 경우 (Recursive relationships)
 class User(models.Model):
     name = models.CharField(max_length=30)
     # 배우자가 없어져도 자신은 없어지지 않는다 (on_delete=models.SET_NULL)
