@@ -3,6 +3,7 @@ from django.db import models
 __all__ = (
     'Place',
     'Restaurant',
+    'Supplier',
 )
 
 
@@ -20,3 +21,10 @@ class Restaurant(Place):
 
     def __str__(self):
         return f'{self.name} Restaurant'
+
+
+class Supplier(Place):
+    customers = models.ManyToManyField(
+        Place,
+        related_name='provider'
+    )
