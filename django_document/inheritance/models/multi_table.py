@@ -24,7 +24,9 @@ class Restaurant(Place):
 
 
 class Supplier(Place):
-    customers = models.ManyToManyField(
+    # place_ptr = models.OneToOneField(Place)
+    supply_places = models.ManyToManyField(
         Place,
-        related_name='provider'
+        related_name='supply_place_set',
+        related_query_name='supply_place',
     )
