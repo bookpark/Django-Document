@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'model',
     'inheritance',
+    'making_queries',
 ]
 
 MIDDLEWARE = [
