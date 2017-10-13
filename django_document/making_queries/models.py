@@ -41,5 +41,8 @@ class Entry(models.Model):
     n_pingbacks = models.IntegerField(default=0)
     rating = models.IntegerField(default=0)
 
+    class Meta:
+        ordering = ['-pk', 'headline']
+
     def __str__(self):
         return self.headline
